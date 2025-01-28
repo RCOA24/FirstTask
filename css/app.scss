@@ -1,0 +1,167 @@
+@import 'variables';
+
+/* Container for the logo */
+.container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px; /* Add spacing below the logo */
+}
+
+/* A4 page dimensions */
+@page {
+    size: A4;
+    margin: 20mm;
+}
+
+/* Ensure the body fits within A4 dimensions */
+body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    padding: 20mm;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+     position: relative;
+    .column {
+        margin-bottom: 20px;
+ 
+    }
+}
+h1 {
+    text-align: left;
+    font-size: 24px;
+    margin-top: 20px;
+    color: $primary;
+}
+/* General column styling */
+
+
+
+
+p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Flex container for BILL TO, CONTACT PERSON, and QUOTE DETAILS */
+.row {
+    display: flex;
+    justify-content: flex-start; /* Align all columns to the left */
+    gap: 20px; /* Space between columns */
+}
+
+/* Individual column padding */
+.padded {
+    padding: 10px;
+    flex: 1; /* Ensure equal spacing for all columns */
+    
+}
+
+/* Limit the column width for better alignment */
+.column {
+    max-width: 300px;
+}
+
+.bordered {
+    border-bottom: 5px solid #113586; /* Add a 5px solid border with the color #113586 */
+    padding: 10px; /* Optional, adds space inside the border */
+    margin-bottom: 50px;
+  
+}
+
+.bordered1 {
+    border-bottom: 5px solid $bordercolor; /* Add a 5px solid border with the color #113586 */
+    padding: 10px; /* Optional, adds space inside the border */
+    margin-top: 200px;
+    margin-bottom: 30px;
+  
+}
+
+
+/* Border color for the .borderedt container */
+.filled-border {
+    display: flex; /* Use Flexbox to align items horizontally */
+    padding: 10px 20px;
+    background-color: $primary; /* Ensure the variable $primary is defined */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .filled-border p {
+    margin: 0 30px; /* Add space between <p> elements */
+  }
+
+
+  .info-box {
+    padding: 15px; /* Add padding around the content inside the box */
+    width: 250px; /* Adjust width to your preference */
+    font-family: Arial, sans-serif; /* Set font style */
+    font-size: 14px; /* Set font size */
+    color: #000; /* Set text color */
+    background-color: #f5f3f3; /* Set a light background color for the box */
+    text-align: left; /* Align text to the left */
+    margin-left: 56%; /* Position the box on the left side */
+    margin-bottom: 7%;
+  }
+  
+  
+  /* Border color for the .borderedt container */
+.filled-border1 {
+    display: flex; /* Use Flexbox to align items horizontally */
+    padding: 10px 20px;
+    background-color: #f5f3f3; /* Ensure the variable $primary is defined */
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-align: left; /* Align text to the left */
+    margin-bottom: 20%;
+  }
+
+ 
+
+    /* Border color for the .borderedt container */
+.filled-border2 {
+    display: flex; /* Use Flexbox to align items horizontally */
+    padding: 10px 20px;
+    background-color: #f5f3f3; /* Ensure the variable $primary is defined */
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-align: left; /* Align text to the left */
+ 
+  }
+
+.Add p {
+    color: gray; /* Change the font color to gray */
+    padding-right: 0px; /* Add right padding */
+ 
+}
+
+.Add p strong {
+    font-weight: bold; /* Make the email bold */
+}
+
+.filled-border3 {
+    display: flex; /* Use Flexbox to align items horizontally */
+    flex-direction: row; /* Align items in a row */
+    padding: 10px 20px;
+    background-color: #f5f3f3; /* Light background */
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-align: left; /* Align text to the left */
+    margin-bottom: 20%;
+}
+
+.filled-border3 p {
+    margin: 5px 25px; /* Adjust space between the <p> elements */
+}
+
+.filled-border3 i {
+    margin-right: 8px; /* Add space between icon and text */
+    font-size: 16px; /* Adjust icon size */
+}
+
+ 
