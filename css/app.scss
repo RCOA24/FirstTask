@@ -136,6 +136,8 @@ p {
 .Add p {
     color: gray; /* Change the font color to gray */
     padding-right: 0px; /* Add right padding */
+    padding: 10px;
+    flex: 1; /* Ensure equal spacing for all columns */
  
 }
 
