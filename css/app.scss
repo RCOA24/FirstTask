@@ -95,18 +95,18 @@ p {
 
 
   .info-box {
-    padding: 15px; /* Add padding around the content inside the box */
-    width: 250px; /* Adjust width to your preference */
-    font-family: Arial, sans-serif; /* Set font style */
-    font-size: 14px; /* Set font size */
-    color: #000; /* Set text color */
-    background-color: #f5f3f3; /* Set a light background color for the box */
-    text-align: left; /* Align text to the left */
-    margin-left: 56%; /* Position the box on the left side */
+    padding: 0; /* Remove padding inside the box */
+    width: 250px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    background-color: #f5f3f3;
+    text-align: left;
+    margin-left: 56%;
     margin-bottom: 7%;
-  }
-  
-  
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width/height */
+}
+
   /* Border color for the .borderedt container */
 .filled-border1 {
     display: flex; /* Use Flexbox to align items horizontally */
@@ -117,6 +117,7 @@ p {
     font-size: 11px;
     text-align: left; /* Align text to the left */
     margin-bottom: 20%;
+    
   }
 
  
@@ -166,4 +167,3 @@ p {
     font-size: 16px; /* Adjust icon size */
 }
 
- 
