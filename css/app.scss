@@ -1,4 +1,5 @@
 @import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 /* Container for the logo */
 .container {
@@ -13,20 +14,21 @@
     margin: 20mm;
 }
 
-/* Ensure the body fits within A4 dimensions */
+
 body {
     width: 210mm;
     height: 297mm;
     margin: 0 auto;
     padding: 20mm;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-     position: relative;
-    .column {
-        margin-bottom: 20px;
- 
-    }
+    font-family: $font;
+    position: relative;
 }
+
+.column {
+    margin-bottom: 20px;
+}
+
 h1 {
     text-align: left;
     font-size: 24px;
@@ -84,7 +86,7 @@ p {
     padding: 10px 20px;
     background-color: $primary; /* Ensure the variable $primary is defined */
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: $font;
     font-size: 11px;
     text-align: left; /* Align text to the left */
   }
@@ -97,7 +99,7 @@ p {
   .info-box {
     padding: 0; /* Remove padding inside the box */
     width: 250px;
-    font-family: Arial, sans-serif;
+    font-family: $font;
     font-size: 14px;
     color: #000;
     background-color: #f5f3f3;
@@ -113,7 +115,7 @@ p {
     padding: 10px 20px;
     background-color: #f5f3f3; /* Ensure the variable $primary is defined */
     color: #000000;
-    font-family: Arial, sans-serif;
+    font-family: $font;
     font-size: 11px;
     text-align: left; /* Align text to the left */
     margin-bottom: 20%;
@@ -128,7 +130,7 @@ p {
     padding: 10px 20px;
     background-color: #f5f3f3; /* Ensure the variable $primary is defined */
     color: #000000;
-    font-family: Arial, sans-serif;
+    font-family: $font;
     font-size: 11px;
     text-align: left; /* Align text to the left */
  
@@ -152,7 +154,7 @@ p {
     padding: 10px 20px;
     background-color: #f5f3f3; /* Light background */
     color: #000000;
-    font-family: Arial, sans-serif;
+    font-family: $font;
     font-size: 11px;
     text-align: left; /* Align text to the left */
     margin-bottom: 20%;

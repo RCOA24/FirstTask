@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 /* Container for the logo */
 .container {
   display: flex;
@@ -10,17 +11,17 @@
   size: A4;
   margin: 20mm;
 }
-/* Ensure the body fits within A4 dimensions */
 body {
   width: 210mm;
   height: 297mm;
   margin: 0 auto;
   padding: 20mm;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Ubuntu";
   position: relative;
 }
-body .column {
+
+.column {
   margin-bottom: 20px;
 }
 
@@ -62,7 +63,7 @@ p {
 }
 
 .bordered1 {
-  border-bottom: 5px solid #83a2ec; /* Add a 5px solid border with the color #113586 */
+  border-bottom: 2px solid #83a2ec; /* Add a 5px solid border with the color #113586 */
   padding: 10px; /* Optional, adds space inside the border */
   margin-top: 200px;
   margin-bottom: 30px;
@@ -74,7 +75,7 @@ p {
   padding: 10px 20px;
   background-color: #3360c9; /* Ensure the variable $primary is defined */
   color: #ffffff;
-  font-family: Arial, sans-serif;
+  font-family: "Ubuntu";
   font-size: 11px;
   text-align: left; /* Align text to the left */
 }
@@ -84,15 +85,16 @@ p {
 }
 
 .info-box {
-  padding: 15px; /* Add padding around the content inside the box */
-  width: 250px; /* Adjust width to your preference */
-  font-family: Arial, sans-serif; /* Set font style */
-  font-size: 14px; /* Set font size */
-  color: #000; /* Set text color */
-  background-color: #f5f3f3; /* Set a light background color for the box */
-  text-align: left; /* Align text to the left */
-  margin-left: 56%; /* Position the box on the left side */
+  padding: 0; /* Remove padding inside the box */
+  width: 250px;
+  font-family: "Ubuntu";
+  font-size: 14px;
+  color: #000;
+  background-color: #f5f3f3;
+  text-align: left;
+  margin-left: 56%;
   margin-bottom: 7%;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width/height */
 }
 
 /* Border color for the .borderedt container */
@@ -101,7 +103,7 @@ p {
   padding: 10px 20px;
   background-color: #f5f3f3; /* Ensure the variable $primary is defined */
   color: #000000;
-  font-family: Arial, sans-serif;
+  font-family: "Ubuntu";
   font-size: 11px;
   text-align: left; /* Align text to the left */
   margin-bottom: 20%;
@@ -113,7 +115,7 @@ p {
   padding: 10px 20px;
   background-color: #f5f3f3; /* Ensure the variable $primary is defined */
   color: #000000;
-  font-family: Arial, sans-serif;
+  font-family: "Ubuntu";
   font-size: 11px;
   text-align: left; /* Align text to the left */
 }
@@ -121,6 +123,8 @@ p {
 .Add p {
   color: gray; /* Change the font color to gray */
   padding-right: 0px; /* Add right padding */
+  padding: 10px;
+  flex: 1; /* Ensure equal spacing for all columns */
 }
 
 .Add p strong {
@@ -133,7 +137,7 @@ p {
   padding: 10px 20px;
   background-color: #f5f3f3; /* Light background */
   color: #000000;
-  font-family: Arial, sans-serif;
+  font-family: "Ubuntu";
   font-size: 11px;
   text-align: left; /* Align text to the left */
   margin-bottom: 20%;
