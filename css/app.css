@@ -1,12 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
-/* Container for the logo */
-.container {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px; /* Add spacing below the logo */
-}
-
-/* A4 page dimensions */
 @page {
   size: A4;
   margin: 20mm;
@@ -21,10 +13,6 @@ body {
   position: relative;
 }
 
-.column {
-  margin-bottom: 20px;
-}
-
 h1 {
   text-align: left;
   font-size: 24px;
@@ -32,60 +20,102 @@ h1 {
   color: #3360c9;
 }
 
-/* General column styling */
 p {
   margin: 5px 0;
   font-size: 14px;
 }
 
-/* Flex container for BILL TO, CONTACT PERSON, and QUOTE DETAILS */
-.row {
-  display: flex;
-  justify-content: flex-start; /* Align all columns to the left */
-  gap: 20px; /* Space between columns */
-}
-
-/* Individual column padding */
-.padded {
-  padding: 10px;
-  flex: 1; /* Ensure equal spacing for all columns */
-}
-
-/* Limit the column width for better alignment */
 .column {
+  margin-bottom: 20px;
   max-width: 300px;
 }
 
+.container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.padded {
+  padding: 10px;
+  flex: 1;
+}
+
 .bordered {
-  border-bottom: 5px solid #113586; /* Add a 5px solid border with the color #113586 */
-  padding: 10px; /* Optional, adds space inside the border */
+  border-bottom: 5px solid #113586;
+  padding: 10px;
   margin-bottom: 50px;
 }
 
 .bordered1 {
-  border-bottom: 2px solid #83a2ec; /* Add a 5px solid border with the color #113586 */
-  padding: 10px; /* Optional, adds space inside the border */
+  border-bottom: 2px solid #83a2ec;
+  padding: 10px;
   margin-top: 200px;
   margin-bottom: 30px;
 }
 
-/* Border color for the .borderedt container */
 .filled-border {
-  display: flex; /* Use Flexbox to align items horizontally */
+  display: flex;
   padding: 10px 20px;
-  background-color: #3360c9; /* Ensure the variable $primary is defined */
+  background-color: #3360c9;
   color: #ffffff;
   font-family: "Ubuntu";
   font-size: 11px;
-  text-align: left; /* Align text to the left */
+  text-align: left;
+}
+.filled-border p {
+  margin: 0 30px;
+}
+@media print {
+  .filled-border {
+    background-color: #3360c9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 }
 
-.filled-border p {
-  margin: 0 30px; /* Add space between <p> elements */
+.filled-border1,
+.filled-border2 {
+  display: flex;
+  padding: 10px 20px;
+  background-color: #f5f3f3;
+  color: #000;
+  font-family: "Ubuntu";
+  font-size: 11px;
+  text-align: left;
+}
+
+.filled-border1 {
+  margin-bottom: 20%;
+}
+
+.filled-border3 {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  background-color: #f5f3f3;
+  color: #000;
+  font-family: "Ubuntu";
+  font-size: 11px;
+  text-align: left;
+  margin-bottom: 20%;
+}
+.filled-border3 p {
+  margin: 5px 25px;
+}
+.filled-border3 i {
+  margin-right: 8px;
+  font-size: 16px;
 }
 
 .info-box {
-  padding: 0; /* Remove padding inside the box */
+  padding: 0;
   width: 250px;
   font-family: "Ubuntu";
   font-size: 14px;
@@ -94,60 +124,14 @@ p {
   text-align: left;
   margin-left: 56%;
   margin-bottom: 7%;
-  box-sizing: border-box; /* Ensure padding and border are included in the element's total width/height */
-}
-
-/* Border color for the .borderedt container */
-.filled-border1 {
-  display: flex; /* Use Flexbox to align items horizontally */
-  padding: 10px 20px;
-  background-color: #f5f3f3; /* Ensure the variable $primary is defined */
-  color: #000000;
-  font-family: "Ubuntu";
-  font-size: 11px;
-  text-align: left; /* Align text to the left */
-  margin-bottom: 20%;
-}
-
-/* Border color for the .borderedt container */
-.filled-border2 {
-  display: flex; /* Use Flexbox to align items horizontally */
-  padding: 10px 20px;
-  background-color: #f5f3f3; /* Ensure the variable $primary is defined */
-  color: #000000;
-  font-family: "Ubuntu";
-  font-size: 11px;
-  text-align: left; /* Align text to the left */
+  box-sizing: border-box;
 }
 
 .Add p {
-  color: gray; /* Change the font color to gray */
-  padding-right: 0px; /* Add right padding */
+  color: gray;
   padding: 10px;
-  flex: 1; /* Ensure equal spacing for all columns */
+  flex: 1;
 }
-
 .Add p strong {
-  font-weight: bold; /* Make the email bold */
-}
-
-.filled-border3 {
-  display: flex; /* Use Flexbox to align items horizontally */
-  flex-direction: row; /* Align items in a row */
-  padding: 10px 20px;
-  background-color: #f5f3f3; /* Light background */
-  color: #000000;
-  font-family: "Ubuntu";
-  font-size: 11px;
-  text-align: left; /* Align text to the left */
-  margin-bottom: 20%;
-}
-
-.filled-border3 p {
-  margin: 5px 25px; /* Adjust space between the <p> elements */
-}
-
-.filled-border3 i {
-  margin-right: 8px; /* Add space between icon and text */
-  font-size: 16px; /* Adjust icon size */
+  font-weight: bold;
 }/*# sourceMappingURL=app.css.map */
