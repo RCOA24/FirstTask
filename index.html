@@ -12,7 +12,9 @@
     </div>
     <!-- Company Information Section -->
     <div class="column">
+        <div class="bold-text">
         <p>Odecci SOLUTIONS Inc.</p>
+    </div>
         <p>Balagtas, Bulacan</p>
         <p>Philippines 3016</p>
         <p>accounts@odecci.com</p>
@@ -21,9 +23,7 @@
     <!-- Main Title -->
     <h1>QUOTATION</h1>
 
-    <!-- Flex Container for BILL TO, CONTACT PERSON, and QUOTE DETAILS -->
     <div class="row">
-        <!-- BILL TO Section -->
         <div class="column padded">
             <h4>BILL TO</h4>
             <p>Name of Company</p>
@@ -31,29 +31,39 @@
             <p>City, State,</p>
             <p>Country, Zip Code</p>
         </div>
-
-        <!-- CONTACT PERSON Section -->
+    
         <div class="column padded">
             <h4>CONTACT PERSON</h4>
-            <p>NAME</p>
-            <p>POSITION</p>
-            <p>PHONE</p>
-            <p>EMAIL</p>
-            <p>Name Here</p>
-            <p>Representative Position</p>
-            <p>00000000</p>
-            <p>sample@email.com</p>
+            <div class="contact-grid">
+                <div class="label-column">
+                    <p>NAME</p>
+                    <p>POSITION</p>
+                    <p>PHONE</p>
+                    <p>EMAIL</p>
+                </div>
+                <div class="value-column">
+                    <p>Name Here</p>
+                    <p>Representative</p>
+                    <p>00000000</p>
+                    <p>sample@email.com</p>
+                </div>
+            </div>
         </div>
-
-        <!-- QUOTE DETAILS Section -->
-        <div class="column padded">
-            <h4>QUOTE DETAILS</h4>
-            <p>Quote#</p>
-            <p>SO#</p>
-            <p>DATE</p>
-            <p>TERMS</p>
+        
+            <div class="column padded">
+                <h4>QUOTE DETAILS</h4>
+                <div class="quote-grid">
+                    <div class="label-column">
+                        <p>Quote#</p>
+                        <p>SO#</p>
+                        <p>DATE</p>
+                        <p>TERMS</p>
+                    </div>
+                    <div class="value-column">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
     <div class="bordered">
     
     </div>
@@ -70,15 +80,24 @@
     <div class="bordered1">
     
     </div>
-
     <div class="info-box" style="background-color: transparent;">
-        <p>Subtotal: $0.00</p>
-        <p>Tax Inclusive</p>
-        <p>Total: $0.00</p>
-        <p class="highlight" style="font-weight: bold; color: #000000; background-color: #eaf0ff; padding: 15px; width: 100%; display: block; margin: 0; box-sizing: border-box;">Amount Due: $0.00</p>
-
-
-
+        <div class="bold-text">
+            <p>Subtotal:</p> <div class="amount">$0.00</div>
+        </div>
+        <div class="row">
+            <div class="tax">
+            <div class="bold-text">
+                <p>TAX</p> 
+            </div>
+            </div>
+            <div class="inclusive">
+                <p><i>Inclusive</i></p>
+            </div>
+        </div>
+        <div class="bold-text">
+            <p>Total:</p> <div class="amount">$0.00</div>
+        </div>
+        <p class="highlight">Amount Due: <span class="amount">$0.00</span></p>
     </div>
     
     
@@ -87,19 +106,23 @@
       
 
       <div class="filled-border1">
+        <div class="bold-text">
         <p>TERMS OF PAYMENT</p>
-    
+    </div>
        </div>
 
 
        <div class="filled-border2">
+        <div class="bold-text">
         <p>NOTE</p>
-    
+    </div>
        </div>
 
        <div class="Add">
+        <div class="bold-text">
         <p>Add Notes Here</p>
         <p>For any concerns contact us at <strong>accounts@odecci.com</strong></p>
+    </div>
     </div>
     
      

@@ -1,153 +1,319 @@
 @import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-// ===== Page Setup (A4 Layout) ===== //
+/* ==========================================================================
+   Page Setup (A4 Layout)
+   ========================================================================== */
+
 @page {
     size: A4;
-    margin: 20mm;
+    margin: 15mm;
 }
 
 body {
     width: 210mm;
     height: 297mm;
     margin: 0 auto;
-    padding: 20mm;
     box-sizing: border-box;
     font-family: $font;
     position: relative;
+    overflow: hidden; /* Prevent content from spilling outside */
 }
 
-// ===== General Styling ===== //
+/* ==========================================================================
+   General Styling
+   ========================================================================== */
+
 h1 {
     text-align: left;
-    font-size: 24px;
-    margin-top: 20px;
+    font-size: 22px;
+    margin-top: 10px;
     color: $primary;
 }
 
 p {
-    margin: 5px 0;
-    font-size: 14px;
+    margin: 3px 0;
+    font-size: 12px;
 }
 
-.column {
-    margin-bottom: 20px;
-    max-width: 300px;
-}
+/* ==========================================================================
+   Layout & Flexbox/Grid
+   ========================================================================== */
 
-// ===== Layout & Flexbox ===== //
 .container {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 20px; // Space below the logo
+    margin-bottom: 15px;
 }
 
 .row {
     display: flex;
     justify-content: flex-start;
-    gap: 20px; // Space between columns
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.column {
+    margin-bottom: 10px;
+    max-width: 30%;
+    flex: 1;
 }
 
 .padded {
     padding: 10px;
-    flex: 1; // Equal spacing for all columns
 }
 
-// ===== Borders & Separators ===== //
+.contact-grid,
+.quote-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    align-items: start;
+}
+
+.label-column {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.quote-details {
+    text-align: right;
+    margin-left: auto;
+    max-width: 280px;
+}
+
+/* ==========================================================================
+   Contact Person Placement
+   ========================================================================== */
+
+   .column.padded:nth-child(2) { /* Targets the second column (Contact Person) */
+    margin-right: 30% /* Pushes it to the left */
+}
+
+
+/* ==========================================================================
+   Text Emphasis
+   ========================================================================== */
+
+.bold-text p {
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Borders & Separators
+   ========================================================================== */
+
 .bordered {
-    border-bottom: 5px solid $color;
-    padding: 10px;
-    margin-bottom: 50px;
+    border-bottom: 4px solid $color;
+    padding: 8px;
+    margin-bottom: 30px;
 }
 
 .bordered1 {
     border-bottom: 2px solid $bordercolor;
-    padding: 10px;
-    margin-top: 200px;
-    margin-bottom: 30px;
+    padding: 8px;
+    margin-top: 150px;
+    margin-bottom: 20px;
 }
 
-// ===== Filled Border Sections ===== //
 .filled-border {
     display: flex;
-    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
     background-color: $primary;
     color: #ffffff;
     font-family: $font;
-    font-size: 11px;
-    text-align: left;
+    font-size: 10px;
+    text-align: center;
+    gap: 90px; /* Spacing between items */
 
     p {
-        margin: 0 30px;
+        margin: 0; /* Remove default p margins */
     }
 
     @media print {
-        background-color: $primary !important; // Force color in print
-        -webkit-print-color-adjust: exact; // WebKit browsers
-        print-color-adjust: exact; // Ensures color is printed
+        background-color: $primary !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 }
-
 
 .filled-border1,
 .filled-border2 {
     display: flex;
-    padding: 10px 20px;
-    background-color: #f5f3f3;
+    padding: 8px 15px;
+    background-color: $highlight;
     color: #000;
     font-family: $font;
-    font-size: 11px;
+    font-size: 10px;
     text-align: left;
+
+    @media print {
+        background-color: $highlight !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 }
 
 .filled-border1 {
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 }
 
 .filled-border3 {
     display: flex;
-    flex-direction: row;
-    padding: 10px 20px;
-    background-color: #f5f3f3;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    background-color: $highlight;
     color: #000;
     font-family: $font;
-    font-size: 11px;
-    text-align: left;
-    margin-bottom: 20%;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 10%;
 
     p {
-        margin: 5px 25px;
+        margin: 3px 15px;
     }
 
     i {
-        margin-right: 8px;
-        font-size: 16px;
+        margin-right: 5px;
+        font-size: 14px;
+    }
+
+    @media print {
+        background-color: $highlight !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 }
 
-// ===== Info Box Styling ===== //
-.info-box {
+/* ==========================================================================
+   Info Box Styles
+   ========================================================================== */
+   .info-box {
     padding: 0;
-    width: 250px;
+    width: 220px;
     font-family: $font;
-    font-size: 14px;
+    font-size: 12px;
     color: #000;
     background-color: #f5f3f3;
     text-align: left;
-    margin-left: 56%;
-    margin-bottom: 7%;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 5%;
     box-sizing: border-box;
+    margin-top: 10px; /* Add top margin to the info-box itself */
+
+
+    .bold-text {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 20px; /* Increased margin between subtotal/total and row */
+    }
+
+    .bold-text p {
+        margin: 0;
+        margin-right: 5px;
+    }
+
+    .amount {
+        margin-left: auto;
+        text-align: right;
+        font-weight: bold; /* Keep font-weight: bold here */
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px; /* Add margin below the row */
+    }
+
+    .tax {
+        flex: 1;
+        text-align: left;
+        margin-right: 10px; /*space between tax and inclusive*/
+
+    }
+
+    .inclusive {
+        flex: 2;
+        text-align: left;
+        font-style: italic;
+    }
+
+    .highlight {
+        font-weight: bold;
+        color: #000000;
+        background-color: #eaf0ff;
+        padding: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin: 0;
+        box-sizing: border-box;
+                margin-bottom: 10px; /*space below highlight*/
+
+    }
+
+    .highlight span {
+        font-weight: bold;
+        text-align: right;
+    }
+
+    @media print {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 }
 
-// ===== Additional Styling ===== //
-.Add {
-    p {
-        color: gray;
-        padding: 10px;
-        flex: 1;
 
-        strong {
-            font-weight: bold;
-        }
+/* ==========================================================================
+   Additional Styling
+   ========================================================================== */
+
+.Add p {
+    color: gray;
+    padding: 5px;
+    flex: 1;
+    margin-left: 5%;
+
+    strong {
+        font-weight: bold;
+    }
+}
+
+
+/* ==========================================================================
+   Print Optimization
+   ========================================================================== */
+
+@media print {
+    * {
+        page-break-inside: avoid !important;
+    }
+
+    body {
+        max-height: 297mm;
+        overflow: hidden;
+    }
+
+    .container,
+    .row {
+        page-break-before: auto;
+        page-break-after: auto;
+    }
+
+    .bordered,
+    .bordered1,
+    .filled-border,
+    .filled-border1,
+    .filled-border2,
+    .filled-border3,
+    .info-box {
+        page-break-inside: avoid;
     }
 }
