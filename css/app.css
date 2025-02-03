@@ -4,7 +4,7 @@
    ========================================================================== */
 @page {
   size: A4;
-  margin: 15mm;
+  margin: 20mm;
 }
 body {
   width: 210mm;
@@ -96,14 +96,14 @@ p {
 .bordered {
   border-bottom: 4px solid #113586;
   padding: 8px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .bordered1 {
   border-bottom: 2px solid #83a2ec;
   padding: 8px;
-  margin-top: 150px;
-  margin-bottom: 20px;
+  margin-top: 120px;
+  margin-bottom: 10px;
 }
 
 .filled-border {
@@ -141,6 +141,34 @@ p {
   padding: 0 18px; /* 10px left and right padding */
   flex: 0 1 auto;
   min-width: 0;
+}
+
+/* ==========================================================================
+   TABLE CONTENTS
+   ========================================================================== */
+.table-container {
+  width: 100%;
+  margin-top: 5px; /* Adds spacing between header and table */
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 11px;
+}
+
+.data-table td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Aligns numeric values to the right */
+.hrs-qty-column,
+.rate-column,
+.amount-column {
+  text-align: center;
 }
 
 .description-column {
@@ -191,7 +219,7 @@ p {
   font-family: "Ubuntu";
   font-size: 10px;
   text-align: center;
-  margin-bottom: 10%;
+  margin-bottom: 1%;
 }
 .filled-border3 p {
   margin: 3px 15px;
