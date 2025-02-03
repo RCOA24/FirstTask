@@ -50,8 +50,7 @@ p {
 
 .column {
   margin-bottom: 10px;
-  max-width: 30%;
-  flex: 1;
+  max-width: 20%;
 }
 
 .padded {
@@ -109,19 +108,49 @@ p {
 
 .filled-border {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 8px 15px;
   background-color: #3360c9;
   color: #ffffff;
   font-family: "Ubuntu";
   font-size: 10px;
-  text-align: center;
-  gap: 90px; /* Spacing between items */
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
+
+.filled-border > div {
+  text-align: left;
+  box-sizing: border-box;
+  padding: 5px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.right-aligned-group {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-right: 0;
+  flex-wrap: wrap;
+}
+
+.right-aligned-group > div {
+  text-align: right;
+  padding: 0 18px; /* 10px left and right padding */
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.description-column {
+  flex-grow: 2;
+}
+
 .filled-border p {
-  margin: 0; /* Remove default p margins */
+  margin: 0; /* Reset any default p margins */
 }
+
 @media print {
   .filled-border {
     background-color: #3360c9 !important;
@@ -129,7 +158,6 @@ p {
     print-color-adjust: exact;
   }
 }
-
 .filled-border1,
 .filled-border2 {
   display: flex;
